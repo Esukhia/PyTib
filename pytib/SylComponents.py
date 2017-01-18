@@ -1,164 +1,110 @@
-# coding: utf-8
-import re
+### Version of SylComponents that is much simpler in its implementation, (thanks to Élie Roux)
+# but still suffers from wrong outputs, like dag where dg would be awaited.
+
+def search(List, len_list, entry):
+    index = bisect_left(List, entry, 0, len_list)
+    return (True if index != len_list and List[index] == entry else False)
+
 
 class SylComponents:
-    """
-    Provides information about a syllable
-    """
+    '''
+    takes a syllable as input
+    outputs:
+        (prefix+main-stack, vowel+suffixes)
+        (exceptions, x)
+        a list of solutions if there is more than one
+        None if the syllable is not wellformed
+    '''
 
-    def __init__(self, dadrag, roots, suffixes, Csuffixes, special, wazurs, ambiguous, m_roots, m_exceptions, m_wazurs):
-        # check for possible dadrag https://github.com/eroux/tibetan-spellchecker/blob/master/doc/second-suffix-da.md
+    def __init__(self):
         # roots is an import from root + rareC and wazurC and suffixes is the 'AB' entry from  suffixes.json
-        self.dadrag = dadrag
-        self.roots = roots
-        self.suffixes = suffixes
-        self.Csuffixes = Csuffixes
-
         # all dicts from https://github.com/eroux/tibetan-spellchecker/tree/master/syllables
-        self.special = special
-        self.wazurs = wazurs
-        self.exceptions = self.special + self.wazurs
-        self.ambiguous = ambiguous
+        Aroots = ['ཀ', 'ཀྱ', 'ཀྲ', 'ཀླ', 'ཁ', 'ཁྱ', 'ཁྲ', 'ག', 'གཏྲ', 'གྱ', 'གྲ', 'གླ', 'ང', 'ཅ', 'ཆ', 'ཇ', 'ཉ', 'ཏ',
+                  'ཏྲ', 'ཐ', 'ཐྲ', 'ད', 'དཀྱ', 'དཀྲ', 'དཀླ', 'དགྱ', 'དགྲ', 'དཔྱ', 'དཔྲ', 'དབྱ', 'དབྲ', 'དམྱ', 'དམྲ',
+                  'དྲ', 'ན', 'པ', 'པྱ', 'པྲ', 'ཕ', 'ཕྱ', 'ཕྲ', 'བ', 'བཀྱ', 'བཀྲ', 'བཀླ', 'བགྱ', 'བགྲ', 'བཏྲ', 'བཟླ',
+                  'བརྐ', 'བརྐྱ', 'བརྒ', 'བརྒྱ', 'བརྔ', 'བརྗ', 'བརྙ', 'བརྟ', 'བརྡ', 'བརྣ', 'བརྩ', 'བརྫ', 'བརླ', 'བལྟ',
+                  'བལྡ', 'བསྐ', 'བསྐྱ', 'བསྐྲ', 'བསྒ', 'བསྒྱ', 'བསྒྲ', 'བསྔ', 'བསྙ', 'བསྟ', 'བསྡ', 'བསྣ', 'བསྩ', 'བསྲ',
+                  'བསླ', 'བྱ', 'བྲ', 'བླ', 'མ', 'མཁྱ', 'མཁྲ', 'མགྱ', 'མགྲ', 'མྱ', 'མྲ', 'ཙ', 'ཚ', 'ཛ', 'ཝ', 'ཞ', 'ཟ',
+                  'ཟླ', 'འ', 'འཁྱ', 'འཁྲ', 'འགྱ', 'འགྲ', 'འདྲ', 'འཕྱ', 'འཕྲ', 'འབྱ', 'འབྲ', 'ཡ', 'ར', 'རྐ', 'རྐྱ', 'རྒ',
+                  'རྒྱ', 'རྔ', 'རྗ', 'རྙ', 'རྟ', 'རྡ', 'རྣ', 'རྦ', 'རྨ', 'རྨྱ', 'རྩ', 'རྫ', 'རླ', 'ལ', 'ལྐ', 'ལྒ', 'ལྔ',
+                  'ལྕ', 'ལྗ', 'ལྟ', 'ལྡ', 'ལྤ', 'ལྦ', 'ལྷ', 'ཤ', 'ས', 'སྐ', 'སྐྱ', 'སྐྲ', 'སྒ', 'སྒྱ', 'སྒྲ', 'སྔ',
+                  'སྙ', 'སྟ', 'སྡ', 'སྣ', 'སྣྲ', 'སྤ', 'སྤྱ', 'སྤྲ', 'སྦ', 'སྦྱ', 'སྦྲ', 'སྨ', 'སྨྱ', 'སྨྲ', 'སྩ', 'སྲ',
+                  'སླ', 'ཧ', 'ཧྲ', 'ཨ']
+        NBroots = ['གཅ', 'གཉ', 'གཏ', 'གད', 'གན', 'གཙ', 'གཞ', 'གཟ', 'གཡ', 'གཤ', 'གས', 'དཀ', 'དག', 'དང', 'དཔ', 'དབ', 'དམ',
+                   'བཀ', 'བག', 'བཅ', 'བཏ', 'བད', 'བཙ', 'བཞ', 'བཟ', 'བཤ', 'བས', 'མཁ', 'མག', 'མང', 'མཆ', 'མཇ', 'མཉ', 'མཐ',
+                   'མད', 'མན', 'མཚ', 'མཛ', 'འཁ', 'འག', 'འཆ', 'འཇ', 'འཐ', 'འད', 'འཕ', 'འབ', 'འཚ', 'འཛ']
+        Croots = ['ཀའུ', 'ཀིའུ', 'ཀེའུ', 'ཀོའུ', 'ཀྭ', 'ཀྭའི', 'ཀྲུའུ', 'ཁེའུ', 'ཁྭ', 'ཁྱིའུ', 'ཁྱེའུ', 'ཁྲིའུ',
+                  'ཁྲུའུ', 'ཁྲེའུ', 'གཅིའུ', 'གཅེའུ', 'གཏེའུ', 'གཙེའུ', 'གཞུའུ', 'གའུ', 'གཡིའུ', 'གྭ', 'གྲིའུ', 'གྲེའུ',
+                  'གྲྭ', 'གླེའུ', 'ཉེའུ', 'ཉྭ', 'ཏེའུ', 'ཐིའུ', 'ཐུའུ', 'ཐེའུ', 'ཐོའུ', 'དཔེའུ', 'དུའུ', 'དེའུ', 'དྭ',
+                  'དྭོ', 'དྲེའུ', 'དྲྭ', 'ནའུ', 'ནེའུ', 'ནོའུ', 'པདྨ', 'ཕེའུ', 'ཕྱྭ', 'ཕྲའུ', 'ཕྲེའུ', 'བསེའུ', 'བསྭ',
+                  'བསྭོ', 'བེའུ', 'བྱའུ', 'བྱིའུ', 'བྱེའུ', 'བྲའུ', 'བྲའོ', 'བྲེའུ', 'བྲོའུ', 'མཐེའུ', 'མདེའུ', 'མཚེའུ',
+                  'མིའུ', 'མུའུ', 'མོའུ', 'མྱིའུ', 'ཙིའུ', 'ཙེའུ', 'ཚའུ', 'ཚུའུ', 'ཚེའུ', 'ཚྭ', 'ཞྭ', 'ཟེའུ', 'ཟྭ',
+                  'འགིའུ', 'འགོའུ', 'འཕེའུ', 'འབེའུ', 'ཡེའུ', 'རེའུ', 'རྒེའུ', 'རྔེའུ', 'རྗེའུ', 'རྟའུ', 'རྟེའུ',
+                  'རྡེའུ', 'རྨེའུ', 'རྩེའུ', 'རྩྭ', 'རྫིའུ', 'རྫེའུ', 'རྭ', 'ལའུ', 'ལིའུ', 'ལེའུ', 'ལོའུ', 'ལྕེའུ',
+                  'ལྭ', 'ཤའུ', 'ཤེའུ', 'ཤྭ', 'སིའུ', 'སེའུ', 'སྒའུ', 'སྒེའུ', 'སྒྱེའུ', 'སྒྲེའུ', 'སྔེའུ', 'སྙེའུ',
+                  'སྟེའུ', 'སྟྭ', 'སྡེའུ', 'སྣེའུ', 'སྤའུ', 'སྤེའུ', 'སྤྱིའུ', 'སྤྲེའུ', 'སྦྲེའུ', 'སྨེའུ', 'སྭ',
+                  'སྲིའུ', 'སླེའུ', 'སླེའོ', 'ཧུའུ', 'ཧེའུ', 'ཧྭ', 'ཧྲུའུ']
+        self.Aroots = sorted(Aroots)
+        self.NBroots = sorted(NBroots)
+        self.Croots = sorted(Croots)
 
-        self.m_roots = m_roots
-        self.m_exceptions = m_exceptions
-        self.m_wazurs = m_wazurs
-        self.mingzhis = self.m_roots.copy()
-        self.mingzhis.update(self.m_exceptions)
-        self.mingzhis.update(self.m_wazurs)
+        suffixes = ['ག', 'གས', 'ང', 'ངས', 'ད', 'ན', 'བ', 'བས', 'མ', 'མས', 'ལ', 'འི', 'འོ', 'འང', 'འམ', 'ར', 'ས',
+                    'ི', 'ིག', 'ིགས', 'ིང', 'ིངས', 'ིད', 'ིན', 'ིབ', 'ིབས', 'ིམ', 'ིམས', 'ིལ', 'ིའི', 'ིའོ', 'ིའང',
+                    'ིའམ', 'ིར', 'ིས',
+                    'ུ', 'ུག', 'ུགས', 'ུང', 'ུངས', 'ུད', 'ུན', 'ུབ', 'ུབས', 'ུམ', 'ུམས', 'ུལ', 'ུའི', 'ུའོ', 'ུའང',
+                    'ུའམ', 'ུར', 'ུས',
+                    'ེ', 'ེག', 'ེགས', 'ེང', 'ེངས', 'ེད', 'ེན', 'ེབ', 'ེབས', 'ེམ', 'ེམས', 'ེལ', 'ེའི', 'ེའོ', 'ེའང',
+                    'ེའམ', 'ེར', 'ེས',
+                    'ོ', 'ོག', 'ོགས', 'ོང', 'ོངས', 'ོད', 'ོན', 'ོབ', 'ོབས', 'ོམ', 'ོམས', 'ོལ', 'ོའི', 'ོའོ', 'ོའང',
+                    'ོའམ', 'ོར', 'ོས']
+        self.Asuffixes = sorted(['འ'] + suffixes)
+        self.NBsuffixes = sorted([''] + suffixes)
+        self.Csuffixes = sorted(['', 'འི', 'འོ', 'འང', 'འམ', 'ར', 'ས'])
 
-    def get_parts(self, syl):
-        """
-        :param syl: takes a syllable as input
-        :return: a tuple:
-                        - (prefix+main-stack, vowel+suffixes)
-                        - (exceptions, x)
-                        - a list of solutions if there is more than one
-                        - None if the syllable is not wellformed
-        """
-        if syl not in self.exceptions and syl not in self.ambiguous:
-            l_s = len(syl)
-            # find all possible roots
-            root = []
-            if len(syl) > 5 and syl[:6] in self.roots:
-                root.append(syl[:6])
-            if len(syl) > 4 and syl[:5] in self.roots:
-                root.append(syl[:5])
-            if len(syl) > 3 and syl[:4] in self.roots:
-                root.append(syl[:4])
-            if len(syl) > 2 and syl[:3] in self.roots:
-                root.append(syl[:3])
-            if len(syl) > 1 and syl[:2] in self.roots:
-                root.append(syl[:2])
-            if len(syl) > 0 and syl[:1] in self.roots:
-                root.append(syl[:1])
-            # find all possible suffixes
-            suffix = []
-            if l_s > 1:
-                if syl[l_s - 1:] in self.suffixes:
-                    suffix.append(syl[l_s - 1:])
-                if syl[l_s - 2:] in self.suffixes:
-                    suffix.append(syl[l_s - 2:])
-                if syl[l_s - 3:] in self.suffixes:
-                    suffix.append(syl[l_s - 3:])
-                if syl[l_s - 4:] in self.suffixes:
-                    suffix.append(syl[l_s - 4:])
-                if syl[l_s - 5:] in self.suffixes:
-                    suffix.append(syl[l_s - 5:])
+        special = ['བགླ', 'མདྲོན', 'བརྡའ', 'བརྟའ']
+        wazurs = ['ཧྭག', 'ཀྭས', 'ཁྭངས', 'ཧྭང', 'ཀྭན', 'དྭགས', 'ཧྭགས', 'དྭངས', 'ཏྭོན']
+        self.exceptions = sorted(special + wazurs)
+        self.ambiguous = {'མངས': ('མ', 'ངས'), 'མགས': ('མ', 'གས'), 'དབས': ('ད', 'བས'), 'དངས': ('ད', 'ངས'),
+                          'དགས': ('དག', 'ས'), 'དམས': ('དམ', 'ས'), 'བགས': ('བ', 'གས'), 'འབས': ('འབ', 'ས'),
+                          'འགས': ('འག', 'ས')}
 
-            # deal with all the C roots
-            # print(self.syl, root)
-            if root != [] and self.roots[root[0]] == 'C':
-                if root[0] == syl:
-                    return root[0], ''
-                else:
-                    for s in suffix:
-                        if s in self.Csuffixes and root[0] + s == syl:
-                            return root[0], s
+        self.len_Aroots = len(self.Aroots)
+        self.len_NBroots = len(self.NBroots)
+        self.len_Croots = len(self.Croots)
+        self.len_Asuffixes = len(self.Asuffixes)
+        self.len_NBsuffixes = len(self.NBsuffixes)
+        self.len_Csuffixes = len(self.Csuffixes)
+        self.len_exceptions = len(self.exceptions)
 
-            # find all possible matches
-            solutions = []
-            if suffix != [] and root != []:
-                # dealing with all other cases
-                for r in root:
-                    for s in suffix:
-                        # unexpected འ་
-                        if self.roots[r] == 'A' and s == 'འ' and r + s == syl:
-                            # print(r, roots[r])
-                            return None
-                        else:
-                            # if root+suffix make the syllable + avoids duplicates
-                            if r + s == syl and (r, s) not in solutions:
-                                solutions.append((r, s))
-                if solutions != []:
-                    if len(solutions) > 1:
-                        return solutions
-                    else:
-                        return solutions[0]
-                # root + suffix don’t make syl
-                else:
-                    # print(solutions)
-                    return None
-            elif root != []:
-                # print('k')
-                for r in root:
-                    if r in self.roots and r == syl:
-                        # if syllable is valid without suffix + without aa
-                        if self.roots[r] != 'NB' and (r, '') not in solutions:
-                            solutions.append((r, ''))
-                if solutions != []:
-                    if len(solutions) > 1:
-                        return solutions
-                    else:
-                        return solutions[0]
-                # non-valid syl
-                else:
-                    return None
-            # non-valid syl
-            else:
-                return None
+    def get(self, syl):
+        solutions = []
+        if search(self.exceptions, self.len_exceptions, syl):
+            solutions.append((syl, 'x'))
         elif syl in self.ambiguous:
-            return self.ambiguous[syl]
+            solutions.append(self.ambiguous[syl])
         else:
-            return syl, 'x'
+            for i in range(1, len(syl) + 1):
+                if len(syl) > i + 1 and syl[i + 1] not in (
+                'ག', 'ང', 'ད', 'ན', 'བ', 'མ', 'འ', 'ར', 'ལ', 'ས', 'ི', 'ུ', 'ེ', 'ོ'): continue
 
-    def get_mingzhi(self, syl):
-        """
-        :param syl: syllable
-        :return:    the mingzhi that will serve for the particle agreement. for example, ཁྱེའུར will return འ
-                    None if more than one solution from get_parts()
-        """
-        components = self.get_parts(syl)
-        if type(components) == 'list' or not components:
+                if search(self.Aroots, self.len_Aroots, syl) or search(self.NBroots, self.len_NBroots, syl) or search(
+                    self.Croots, self.len_Croots, syl):
+                    if (syl, '') not in solutions:
+                        solutions.append((syl, ''))
+                else:
+                    root = syl[0:i]
+                    suf = syl[i:]
+                    if (search(self.Asuffixes, self.len_Asuffixes, suf) and search(self.Aroots, self.len_Aroots,
+                                                                                   root)) or (
+                        search(self.NBroots, self.len_NBroots, root) and search(self.NBsuffixes, self.len_NBsuffixes,
+                                                                                suf)) or (
+                        search(self.Csuffixes, self.len_Csuffixes, suf) and search(self.Croots, self.len_Croots, root)):
+                        if (root, suf) not in solutions:
+                            solutions.append((root, suf))
+
+        if len(solutions) > 1:
+            return solutions
+        if len(solutions) == 1:
+            return solutions[0]
+        if solutions == []:
             return None
-        else:
-            return self.mingzhis[components[0]]
-
-    def get_info(self, syl):
-        """
-        :param syl: syllable
-        :return: required info to part_agreement:
-                - dadrag
-                - thame
-                - the syllable
-        """
-        mingzhi = self.get_mingzhi(syl)
-        if not mingzhi:
-            return None
-        else:
-            if syl in self.dadrag:
-                return 'dadrag'
-            elif re.findall(mingzhi + '([ྱྲླྭྷ]?[ིེོུ]?(འ?[ིོུ]?ར?ས?|(འ[མང])?|(འིའོ)?))$', syl) != []:
-                return 'thame'
-            else:
-                return syl
-
-    def is_thame(self, word):
-        if '་' in word:
-            last_syl = word.split('་')[-1]
-        else:
-            last_syl = word
-        if self.get_info(last_syl) == 'thame':
-            return True
-        else:
-            return False
