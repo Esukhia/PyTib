@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='pytib',
-    version='0.0.0',
+    version='1.0.0',
     description="PyTib contains a Python3 module to process Tibetan text. It segments text into words, checks for spelling mistakes and more.",
     long_description=readme + '\n\n' + history,
     author="Drupchen Dorje",
