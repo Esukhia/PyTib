@@ -24,6 +24,15 @@ lexicon.extend(exceptions)
 len_word_syls = list(set([len(word.split('་')) for word in lexicon]))
 len_word_syls = sorted(len_word_syls, reverse=True)
 
+# Include user vocabulary lists in the lexicon
+vocab_path = os.path.join(this_dir, 'user_vocabs')
+user_vocabs = {}
+for f in os.listdir(vocab_path):
+    origin = f.replace('.txt', '')
+    with open(os.path.join(vocab_path, f), 'r', -1, 'utf-8-sig') as f:
+        entries = [line.strip() for line in f.readlines() if not line.startswith('#')]
+        user_vocabs[origin] = entries
+
 # compound words to join by default
 with open(os.path.join(this_dir, "data", "compound_lexicon.csv"), 'r', -1, 'utf-8-sig') as f:
     raw = [line.strip() for line in f.readlines()]
@@ -77,7 +86,7 @@ getSylComponents.instance = None
 def Segment():
     from .Segmentation import Segment, strip_list, search
     SC = getSylComponents()
-    return Segment(lexicon, compound, ancient, exceptions, len_word_syls, SC)
+    return Segment(lexicon, compound, ancient, exceptions, len_word_syls, user_vocabs, SC)
 
 
 def Agreement():
