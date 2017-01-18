@@ -1,21 +1,24 @@
 # coding: utf-8
 
 import re
-from .common import strip_list, search, occ_indexes, merge_list_items, split_list_items, is_tibetan_letter
+from .common import strip_list, search, occ_indexes, merge_list_items, split_list_items, is_tibetan_letter, open_file
 
 mark = '#'  # marker of unknown syllables. Can’t be a letter. Only 1 char allowed. Can’t be left empty.
 
 
 class Segment:
-    def __init__(self, lexicon, compound, ancient, exceptions, len_word_syls, SC):
+    def __init__(self, lexicon, compound, ancient, exceptions, len_word_syls, user_vocabs, SC):
         self.lexicon = lexicon
+        self.user_vocabs = user_vocabs
         self.merged_part = r'(ར|ས|འི|འམ|འང|འོ|འིའོ)$'
         self.punct_regex = r'(་?[༄༅༆༇༈།༎༏༐༑༔\s]+་?)'
 
         self.SC = SC
+
         # for bisect
         self.lexicon = sorted(self.lexicon)
         self.len_lexicon = len(self.lexicon)
+
         self.compound = compound
         self.len_word_syls = len_word_syls
 
@@ -23,6 +26,41 @@ class Segment:
         self.exceptions = exceptions
 
         self.n = 0  # counter needed between methods segment() and __process()
+
+    def include_user_vocab(self, vocabs=True):
+        def find_non_dupes(longer_list, len_longer, shorter_list):
+            non_dupes = []
+            for x in shorter_list:
+                if not search(longer_list, x, len_longer):
+                    non_dupes.append(x)
+            return non_dupes
+
+        def find_new(vocabs):
+            new_entries = []
+            for vocab in vocabs:
+                # filter the current vocab with the previously found new_entries
+                deduped_vocab = find_non_dupes(new_entries, len(new_entries), self.user_vocabs[vocab])
+                # find entries from deduped_vocab that are not in self.lexicon
+                new = find_non_dupes(self.lexicon, self.len_lexicon, deduped_vocab)
+                new_entries.extend(new)
+            return new_entries
+
+        # 1. find all new entries to add to self.lexicon
+        if type(vocabs) is not list:
+            all_vocabs = [a for a in self.user_vocabs.keys()]
+            total_entries = find_new(all_vocabs)
+        else:
+            total_entries = find_new(vocabs)
+
+        # 2. update the lexicon with the new entries
+        self.lexicon = sorted(self.lexicon+total_entries)
+
+        # for bisect
+        self.len_lexicon = len(self.lexicon)
+
+        # for segment()
+        self.len_word_syls = list(set([len(word.split('་')) for word in self.lexicon]))
+        self.len_word_syls = sorted(self.len_word_syls, reverse=True)
 
     def is_word(self, maybe):
         final = False

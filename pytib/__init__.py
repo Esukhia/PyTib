@@ -2,7 +2,7 @@
 
 __author__ = """Drupchen Dorje"""
 __email__ = 'hhdrupchen@gmail.com'
-__version__ = '1.0.0'
+__version__ = '0.0.0'
 
 import os
 import json
@@ -21,12 +21,17 @@ with open(os.path.join(this_dir, "data", "exceptions.txt"), 'r', -1, 'utf-8-sig'
     exceptions = [line.strip() for line in f.readlines() if not line.startswith('#')]
 lexicon.extend(exceptions)
 # calculate the sizes of words in the lexicon, for segment()
-len_word_syls = []
-for word in lexicon:
-    l = len(word.split('་'))
-    if l not in len_word_syls:
-        len_word_syls.append(l)
+len_word_syls = list(set([len(word.split('་')) for word in lexicon]))
 len_word_syls = sorted(len_word_syls, reverse=True)
+
+# Include user vocabulary lists in the lexicon
+vocab_path = os.path.join(this_dir, 'user_vocabs')
+user_vocabs = {}
+for f in os.listdir(vocab_path):
+    origin = f.replace('.txt', '')
+    with open(os.path.join(vocab_path, f), 'r', -1, 'utf-8-sig') as f:
+        entries = [line.strip() for line in f.readlines() if not line.startswith('#')]
+        user_vocabs[origin] = entries
 
 # compound words to join by default
 with open(os.path.join(this_dir, "data", "compound_lexicon.csv"), 'r', -1, 'utf-8-sig') as f:
@@ -81,7 +86,7 @@ getSylComponents.instance = None
 def Segment():
     from .Segmentation import Segment, strip_list, search
     SC = getSylComponents()
-    return Segment(lexicon, compound, ancient, exceptions, len_word_syls, SC)
+    return Segment(lexicon, compound, ancient, exceptions, len_word_syls, user_vocabs, SC)
 
 
 def Agreement():
