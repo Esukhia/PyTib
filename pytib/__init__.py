@@ -2,7 +2,7 @@
 
 __author__ = """Drupchen Dorje"""
 __email__ = 'hhdrupchen@gmail.com'
-__version__ = '1.0.0'
+__version__ = '0.0.0'
 
 import os
 import json
