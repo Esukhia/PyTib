@@ -21,11 +21,7 @@ with open(os.path.join(this_dir, "data", "exceptions.txt"), 'r', -1, 'utf-8-sig'
     exceptions = [line.strip() for line in f.readlines() if not line.startswith('#')]
 lexicon.extend(exceptions)
 # calculate the sizes of words in the lexicon, for segment()
-len_word_syls = []
-for word in lexicon:
-    l = len(word.split('་'))
-    if l not in len_word_syls:
-        len_word_syls.append(l)
+len_word_syls = list(set([len(word.split('་')) for word in lexicon]))
 len_word_syls = sorted(len_word_syls, reverse=True)
 
 # compound words to join by default
