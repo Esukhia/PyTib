@@ -2,7 +2,7 @@
 
 __author__ = """Drupchen Dorje"""
 __email__ = 'hhdrupchen@gmail.com'
-__version__ = '1.0.0'
+__version__ = '0.0.0'
 
 import os
 import json
@@ -70,6 +70,16 @@ with open(os.path.join(this_dir, "data", "Agreement.json"), 'r', -1, 'utf-8-sig'
 particles = a_data['particles']
 corrections = a_data['corrections']
 
+# data for AntTib
+with open(os.path.join(this_dir, "data", "AntTib.json"), 'r', -1, 'utf-8-sig') as f:
+    t_data = json.loads(f.read())
+t_roots = t_data['roots']
+t_rareC = t_data['rareC']
+t_wazurC = t_data['wazurC']
+t_NB = t_data['NB']
+t_special = t_data['special']
+t_wazur = t_data['wazur']
+
 
 def getSylComponents():
     if not getSylComponents.instance:
@@ -90,4 +100,22 @@ def Agreement():
     return Agreement(particles, corrections, SC)
 
 
-__all__ = ['Segment', 'getSylComponents', 'Agreement']
+def AntTib():
+    from .AntTib import AntTib, strip_list
+    SC = getSylComponents()
+    return AntTib(t_roots, t_rareC, t_wazurC, t_NB, t_special, t_wazur, SC)
+
+
+def getAntTib():
+    if not getAntTib.instance:
+        getAntTib.instance = AntTib()
+    return getAntTib.instance
+getAntTib.instance = None
+
+
+def AntPut():
+    from .AntPut import AntPut
+    AT = getAntTib()
+    return AntPut(AT)
+
+__all__ = ['Segment', 'getSylComponents', 'Agreement', 'AntTib', 'AntPut']

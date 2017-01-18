@@ -1,0 +1,22 @@
+#Total No. of Cluster Types: 16
+#Total No. of Cluster Tokens: 18
+1	2	1	la vgro
+2	2	1	la vphur
+3	1	1	la bros
+4	1	1	la brten
+5	1	1	la bshad
+6	1	1	la gqyugs
+7	1	1	la grosxmol
+8	1	1	la jixltar
+9	1	1	la lamxvgro
+10	1	1	la rnamxpa
+11	1	1	la rusxsbal
+12	1	1	la so
+13	1	1	la zhedxsnang
+14	1	1	la;  dexring
+15	1	1	la;  doxnub
+16	1	1	la;  gnasxtshul
+
+
+
+

@@ -1,0 +1,18 @@
+1	  mnyam vthung byas te gnas yod;  *** zhig 	la rusxsbal zhig khongxtsho vi gam du yong 	ant_story.txt	0	1
+2	  yong ste;  rnamxpa tsho khams bzang ; nga 	la rnamxpa tsho dang grogsxpo yagxpo zhig sgrig 	ant_story.txt	0	2
+3	  rngonxpa mangx*** yodxpa s;  khyed kyi bdexvjags 	la jixltar srungxskyob byed ces dris;  rusxsbal na	ant_story.txt	0	3
+4	  byed ces dris;  rusxsbal naxre;  rgyuxmtshan de 	la brten te;  nga s khyed tsho dang 	ant_story.txt	0	4
+5	  de bros;  dexnas khwaxta yarxba r snang 	la vphur;  tsixtsi mar khungx*** vi nang du 	ant_story.txt	0	5
+6	  khwaxta tsixtsi gsum gyis rusxsbal skyob thabs 	la grosxmol byas te vcharxgzhi legsxpa r btang ; *	ant_story.txt	0	6
+7	  legsxpa r btang ; *** ***xnas khwaxta yar gnam 	la vphur te barxsnang nas mar bltasxpa na;  	ant_story.txt	0	7
+8	 ;  rngonxpa s rusxsbal khur te;  chuxvgram zhig 	la vgro bzhinx*** mthong ; dexnas shaxba rngonxpa 	ant_story.txt	0	8
+9	  de mthongxba na;  haxcang dgav ste sems 	la;  dexring rang la lamxvgro vdug bsam ste;  	ant_story.txt	0	9
+10	 ;  haxcang dgav ste sems la;  dexring rang 	la lamxvgro vdug bsam ste;  rusxsbalxma r sa 	ant_story.txt	0	10
+11	  lamxvgro vdug bsam ste;  rusxsbalxma r sa 	la gqyugs rjes shaxba vdzin du rgyugs;  vcharxgzhi	ant_story.txt	0	11
+12	  vjug sa vi snod kyi khugxma de 	la so btab nas rusxsbal bskyabsxpa dang ; rusxsbal	ant_story.txt	0	12
+13	  nas yib bsdadxpa red;  rngonxpa vi sems 	la;  doxnub shaxba vi sha btsos te zhimxpo 	ant_story.txt	0	13
+14	 ; sangxnyin shaxba vi pagsxpa btsongxba r khrom 	la vgro dgosxpa laxsogsxpa vi vcharxgzhi mangxpo g	ant_story.txt	0	14
+15	  dang ; rexzhig hadxde lus;  dexnas yang sems 	la;  gnasxtshul vdixni spyirxbtang zhig maxred bsa	ant_story.txt	0	15
+16	 dixni spyirxbtang zhig maxred bsamxpa dang ; sems 	la zhedxsnang skyes te nagsxgseb dexlas phyir rang	ant_story.txt	0	16
+17	  skyes te nagsxgseb dexlas phyir rang khyim 	la bros; *** ***xpa s gnasxtshul dexrang gi chungx	ant_story.txt	0	17
+18	  chungxma r bshad;  chungxma s khyim mtshes 	la bshad de;  gnasxtshul de mixkha gcig nas 	ant_story.txt	0	18

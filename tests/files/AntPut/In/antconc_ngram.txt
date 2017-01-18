@@ -1,0 +1,957 @@
+#Total No. of N-Gram Types: 955
+#Total No. of N-Gram Tokens: 1001
+1	5	1	de r
+2	4	1	nang du
+3	4	1	rngonxpa vi
+4	4	1	sems la
+5	3	1	r rngonxpa
+6	3	1	shaxba vi
+7	2	1	bsamxpa dang
+8	2	1	byas te
+9	2	1	dang grogsxpo
+10	2	1	dang khwaxta
+11	2	1	de la
+12	2	1	de r rngonxpa
+13	2	1	de s
+14	2	1	du song
+15	2	1	la vgro
+16	2	1	la vphur
+17	2	1	lag tu
+18	2	1	na mnyam
+19	2	1	na vng
+20	2	1	nagsxgseb de
+21	2	1	nga s
+22	2	1	rnamxpa tsho
+23	2	1	rngonxpa de
+24	2	1	rngonxpa de s
+25	2	1	rngonxpa s
+26	2	1	s khyed
+27	2	1	s rusxsbal
+28	2	1	sgrig vdod
+29	2	1	shaxba de
+30	2	1	songxba s
+31	2	1	tsho dang
+32	2	1	vi nang
+33	2	1	vi nang du
+34	2	1	yodxpa s
+35	2	1	zhig la
+36	1	1	barxsnang nas
+37	1	1	barxsnang nas mar
+38	1	1	bcas grogsxpo
+39	1	1	bcas grogsxpo gsum
+40	1	1	bcug nas
+41	1	1	bcug nas rgyab
+42	1	1	bde zhing
+43	1	1	bde zhing skyidxpa
+44	1	1	bdexvjags la
+45	1	1	bdexvjags la jixltar
+46	1	1	bltasxpa na
+47	1	1	bltasxpa na rngonxpa
+48	1	1	brgyud de
+49	1	1	brgyud de yulxphyogs
+50	1	1	bros dexnas
+51	1	1	bros dexnas khwaxta
+52	1	1	bros xpa
+53	1	1	bros xpa s
+54	1	1	brten te
+55	1	1	brten te nga
+56	1	1	bsam ste
+57	1	1	bsam ste rusxsbalxma
+58	1	1	bsamxpa dang rexzhig
+59	1	1	bsamxpa dang sems
+60	1	1	bsdad rngonxpa
+61	1	1	bsdad rngonxpa s
+62	1	1	bsdadxpa red
+63	1	1	bsdadxpa red rngonxpa
+64	1	1	bshad chungxma
+65	1	1	bshad chungxma s
+66	1	1	bshad de
+67	1	1	bshad de gnasxtshul
+68	1	1	bshad khwaxta
+69	1	1	bshad khwaxta s
+70	1	1	bshad rgyu
+71	1	1	bshad rgyu r
+72	1	1	bskyabsxpa dang
+73	1	1	bskyabsxpa dang rusxsbal
+74	1	1	btab de
+75	1	1	btab de r
+76	1	1	btab nas
+77	1	1	btab nas rusxsbal
+78	1	1	btang xnas
+79	1	1	btang xnas khwaxta
+80	1	1	btsal ched
+81	1	1	btsal ched yin
+82	1	1	btsongxba r
+83	1	1	btsongxba r khrom
+84	1	1	btsos te
+85	1	1	btsos te zhimxpo
+86	1	1	byas na
+87	1	1	byas na vng
+88	1	1	byas te gnas
+89	1	1	byas te vcharxgzhi
+90	1	1	byas yinxnavang
+91	1	1	byas yinxnavang rngonxpa
+92	1	1	byed ces
+93	1	1	byed ces dris
+94	1	1	byed yinxnaxyang
+95	1	1	byed yinxnaxyang nagsxtshal
+96	1	1	bzang nga
+97	1	1	bzang nga la
+98	1	1	bzhin yodxpa
+99	1	1	bzhin yodxpa red
+100	1	1	bzhinx mthong
+101	1	1	bzhinx mthong dexnas
+102	1	1	ces dris
+103	1	1	ces dris rusxsbal
+104	1	1	ched yin
+105	1	1	ched yin zhes
+106	1	1	chod xnas
+107	1	1	chod xnas rngonxpa
+108	1	1	chu hubxgang
+109	1	1	chu hubxgang yod
+110	1	1	chu nang
+111	1	1	chu nang du
+112	1	1	chungxma r
+113	1	1	chungxma r bshad
+114	1	1	chungxma s
+115	1	1	chungxma s khyim
+116	1	1	chuxvgram zhig
+117	1	1	chuxvgram zhig la
+118	1	1	dang chu
+119	1	1	dang chu hubxgang
+120	1	1	dang grogsxpo sgrig
+121	1	1	dang grogsxpo yagxpo
+122	1	1	dang khwaxta gcig
+123	1	1	dang khwaxta tsixtsi
+124	1	1	dang lhan
+125	1	1	dang lhan du
+126	1	1	dang rexzhig
+127	1	1	dang rexzhig hadxde
+128	1	1	dang rixdwags
+129	1	1	dang rixdwags rnams
+130	1	1	dang rusxsbal
+131	1	1	dang rusxsbal yang
+132	1	1	dang sems
+133	1	1	dang sems la
+134	1	1	dang yin
+135	1	1	dang yin nga
+136	1	1	dangxlen gnang
+137	1	1	dangxlen gnang rogs
+138	1	1	de bros
+139	1	1	de bros dexnas
+140	1	1	de gnasxtshul
+141	1	1	de gnasxtshul de
+142	1	1	de la brten
+143	1	1	de la so
+144	1	1	de len
+145	1	1	de len du
+146	1	1	de mixkha
+147	1	1	de mixkha gcig
+148	1	1	de mthongxba
+149	1	1	de mthongxba na
+150	1	1	de r thon
+151	1	1	de r tsixtsi
+152	1	1	de r yongs
+153	1	1	de rgyugs
+154	1	1	de rgyugs shar
+155	1	1	de s rang
+156	1	1	de s rusxsbal
+157	1	1	de vtshe
+158	1	1	de vtshe med
+159	1	1	de yulxphyogs
+160	1	1	de yulxphyogs de
+161	1	1	dexlas phyir
+162	1	1	dexlas phyir rang
+163	1	1	dexmaxgtogs rusxsbal
+164	1	1	dexmaxgtogs rusxsbal mthong
+165	1	1	dexmaxthag shaxba
+166	1	1	dexmaxthag shaxba de
+167	1	1	dexnas khwaxta
+168	1	1	dexnas khwaxta yarxba
+169	1	1	dexnas shaxba
+170	1	1	dexnas shaxba rngonxpa
+171	1	1	dexnas yang
+172	1	1	dexnas yang sems
+173	1	1	dexnasxbzung nagsxgseb
+174	1	1	dexnasxbzung nagsxgseb de
+175	1	1	dexrang gi
+176	1	1	dexrang gi chungxma
+177	1	1	dexring rang
+178	1	1	dexring rang la
+179	1	1	dexsngon nagsxtshal
+180	1	1	dexsngon nagsxtshal zhig
+181	1	1	dgav ste
+182	1	1	dgav ste sems
+183	1	1	dgavxbsu byed
+184	1	1	dgavxbsu byed yinxnaxyang
+185	1	1	dgosxpa laxsogsxpa
+186	1	1	dgosxpa laxsogsxpa vi
+187	1	1	doxnub shaxba
+188	1	1	doxnub shaxba vi
+189	1	1	dris rusxsbal
+190	1	1	dris rusxsbal naxre
+191	1	1	du bcug
+192	1	1	du bcug nas
+193	1	1	du grogs
+194	1	1	du grogs sgrig
+195	1	1	du mchongs
+196	1	1	du mchongs nas
+197	1	1	du rgyugs
+198	1	1	du rgyugs vcharxgzhi
+199	1	1	du rngonxpa
+200	1	1	du rngonxpa mangx
+201	1	1	du slebs
+202	1	1	du slebs laxnyex
+203	1	1	du song na
+204	1	1	du song ste
+205	1	1	du vdzul
+206	1	1	du vdzul rusxsbal
+207	1	1	du vtshoxba
+208	1	1	du vtshoxba rol
+209	1	1	du yong
+210	1	1	du yong ste
+211	1	1	dus dexnasxbzung
+212	1	1	dus dexnasxbzung nagsxgseb
+213	1	1	gam du
+214	1	1	gam du yong
+215	1	1	gangxyod na
+216	1	1	gangxyod na mnyam
+217	1	1	gcanxgzan dang
+218	1	1	gcanxgzan dang rixdwags
+219	1	1	gcig bcas
+220	1	1	gcig bcas grogsxpo
+221	1	1	gcig dang
+222	1	1	gcig dang khwaxta
+223	1	1	gcig gis
+224	1	1	gcig gis phar
+225	1	1	gcig kyang
+226	1	1	gcig kyang vgro
+227	1	1	gcig nas
+228	1	1	gcig nas gnyis
+229	1	1	gcig tsixtsi
+230	1	1	gcig tsixtsi gcig
+231	1	1	gi chungxma
+232	1	1	gi chungxma r
+233	1	1	gi migxvkhrulxba
+234	1	1	gi migxvkhrulxba minxnam
+235	1	1	gi nang
+236	1	1	gi nang du
+237	1	1	gis phar
+238	1	1	gis phar nagsxgseb
+239	1	1	glod de
+240	1	1	glod de bros
+241	1	1	gnam la
+242	1	1	gnam la vphur
+243	1	1	gnang rogs
+244	1	1	gnang rogs zhes
+245	1	1	gnas so
+246	1	1	gnas yod
+247	1	1	gnas yod zhig
+248	1	1	gnasxtshul de
+249	1	1	gnasxtshul de mixkha
+250	1	1	gnasxtshul dexrang
+251	1	1	gnasxtshul dexrang gi
+252	1	1	gnasxtshul vdixni
+253	1	1	gnasxtshul vdixni spyirxbtang
+254	1	1	gnyis brgyud
+255	1	1	gnyis brgyud de
+256	1	1	gog maxnu
+257	1	1	gog maxnu r
+258	1	1	gqyugs rjes
+259	1	1	gqyugs rjes shaxba
+260	1	1	graxsgrig byas
+261	1	1	graxsgrig byas yinxnavang
+262	1	1	grogs sgrig
+263	1	1	grogs sgrig nas
+264	1	1	grogsxpo gsum
+265	1	1	grogsxpo gsum mnyam
+266	1	1	grogsxpo sgrig
+267	1	1	grogsxpo sgrig vdod
+268	1	1	grogsxpo yagxpo
+269	1	1	grogsxpo yagxpo zhig
+270	1	1	grosxmol byas
+271	1	1	grosxmol byas te
+272	1	1	gseb tu
+273	1	1	gseb tu vdzul
+274	1	1	gsum gyis
+275	1	1	gsum gyis rusxsbal
+276	1	1	gsum mnyam
+277	1	1	gsum mnyam du
+278	1	1	gyis nyal
+279	1	1	gyis nyal nas
+280	1	1	gyis phar
+281	1	1	gyis phar rtswa
+282	1	1	gyis rusxsbal
+283	1	1	gyis rusxsbal skyob
+284	1	1	gyur rngonxpa
+285	1	1	gyur rngonxpa de
+286	1	1	gyur te
+287	1	1	gyur te gcanxgzan
+288	1	1	hadxde lus
+289	1	1	hadxde lus dexnas
+290	1	1	haxcang dgav
+291	1	1	haxcang dgav ste
+292	1	1	hubxgang yod
+293	1	1	hubxgang yod na
+294	1	1	jixltar srungxskyob
+295	1	1	jixltar srungxskyob byed
+296	1	1	kham gangxyod
+297	1	1	kham gangxyod na
+298	1	1	khams bzang
+299	1	1	khams bzang nga
+300	1	1	khongxtsho s
+301	1	1	khongxtsho s zas
+302	1	1	khongxtsho vi
+303	1	1	khongxtsho vi gam
+304	1	1	khrom la
+305	1	1	khrom la vgro
+306	1	1	khugxma de
+307	1	1	khugxma de la
+308	1	1	khugxma stongx
+309	1	1	khugxma stongx dexmaxgtogs
+310	1	1	khugxma zhig
+311	1	1	khugxma zhig gi
+312	1	1	khul gyis
+313	1	1	khul gyis nyal
+314	1	1	khungx vi
+315	1	1	khungx vi nang
+316	1	1	khur shaxba
+317	1	1	khur shaxba shor
+318	1	1	khur te
+319	1	1	khur te chuxvgram
+320	1	1	khwaxta gcig
+321	1	1	khwaxta gcig tsixtsi
+322	1	1	khwaxta s
+323	1	1	khwaxta s bshad
+324	1	1	khwaxta tsixtsi
+325	1	1	khwaxta tsixtsi gsum
+326	1	1	khwaxta yar
+327	1	1	khwaxta yar gnam
+328	1	1	khwaxta yarxba
+329	1	1	khwaxta yarxba r
+330	1	1	khyab dus
+331	1	1	khyab dus dexnasxbzung
+332	1	1	khyed kyi
+333	1	1	khyed kyi bdexvjags
+334	1	1	khyed tsho
+335	1	1	khyed tsho dang
+336	1	1	khyim la
+337	1	1	khyim la bros
+338	1	1	khyim mtshes
+339	1	1	khyim mtshes la
+340	1	1	kyang vgro
+341	1	1	kyang vgro ma
+342	1	1	kyi bdexvjags
+343	1	1	kyi bdexvjags la
+344	1	1	kyi khugxma
+345	1	1	kyi khugxma de
+346	1	1	la bros
+347	1	1	la bros xpa
+348	1	1	la brten
+349	1	1	la brten te
+350	1	1	la bshad
+351	1	1	la bshad de
+352	1	1	la dexring
+353	1	1	la dexring rang
+354	1	1	la doxnub
+355	1	1	la doxnub shaxba
+356	1	1	la gnasxtshul
+357	1	1	la gnasxtshul vdixni
+358	1	1	la gqyugs
+359	1	1	la gqyugs rjes
+360	1	1	la grosxmol
+361	1	1	la grosxmol byas
+362	1	1	la jixltar
+363	1	1	la jixltar srungxskyob
+364	1	1	la lamxvgro
+365	1	1	la lamxvgro vdug
+366	1	1	la rnamxpa
+367	1	1	la rnamxpa tsho
+368	1	1	la rusxsbal
+369	1	1	la rusxsbal zhig
+370	1	1	la so
+371	1	1	la so btab
+372	1	1	la vgro bzhinx
+373	1	1	la vgro dgosxpa
+374	1	1	la vphur te
+375	1	1	la vphur tsixtsi
+376	1	1	la zhedxsnang
+377	1	1	la zhedxsnang skyes
+378	1	1	lag tu shor
+379	1	1	lag tu shorx
+380	1	1	lamxvgro vdug
+381	1	1	lamxvgro vdug bsam
+382	1	1	lan btab
+383	1	1	lan btab de
+384	1	1	laxnyex na
+385	1	1	laxnyex na shaxba
+386	1	1	laxsogsxpa vi
+387	1	1	laxsogsxpa vi vcharxgzhi
+388	1	1	legsxpa r
+389	1	1	legsxpa r btang
+390	1	1	len du
+391	1	1	len du song
+392	1	1	lhan du
+393	1	1	lhan du grogs
+394	1	1	ltar skabs
+395	1	1	ltar skabs de
+396	1	1	ltix shig
+397	1	1	ltix shig tu
+398	1	1	lus dexnas
+399	1	1	lus dexnas yang
+400	1	1	ma phodxpa
+401	1	1	ma phodxpa r
+402	1	1	ma thubxpa
+403	1	1	ma thubxpa r
+404	1	1	mangx yodxpa
+405	1	1	mangx yodxpa s
+406	1	1	mangxpo graxsgrig
+407	1	1	mangxpo graxsgrig byas
+408	1	1	mar bltasxpa
+409	1	1	mar bltasxpa na
+410	1	1	mar khungx
+411	1	1	mar khungx vi
+412	1	1	maxnu r
+413	1	1	maxnu r gyis
+414	1	1	maxred bsamxpa
+415	1	1	maxred bsamxpa dang
+416	1	1	mchong thengs
+417	1	1	mchong thengs gcig
+418	1	1	mchongs nas
+419	1	1	mchongs nas yib
+420	1	1	med zhixba
+421	1	1	med zhixba vi
+422	1	1	medxpa r
+423	1	1	medxpa r gyur
+424	1	1	mgyogsxpo r
+425	1	1	mgyogsxpo r chu
+426	1	1	migxvkhrulxba minxnam
+427	1	1	migxvkhrulxba minxnam bsamxpa
+428	1	1	minxnam bsamxpa
+429	1	1	minxnam bsamxpa dang
+430	1	1	mixkha gcig
+431	1	1	mixkha gcig nas
+432	1	1	mnyam du
+433	1	1	mnyam du vtshoxba
+434	1	1	mnyam vthung
+435	1	1	mnyam vthung byas
+436	1	1	mnyam za
+437	1	1	mnyam za dang
+438	1	1	mthong dexnas
+439	1	1	mthong dexnas shaxba
+440	1	1	mthong sa
+441	1	1	mthong sa r
+442	1	1	mthongxba na
+443	1	1	mthongxba na haxcang
+444	1	1	mtshes la
+445	1	1	mtshes la bshad
+446	1	1	na haxcang
+447	1	1	na haxcang dgav
+448	1	1	na mnyam vthung
+449	1	1	na mnyam za
+450	1	1	na rngonxpa
+451	1	1	na rngonxpa s
+452	1	1	na shaxba
+453	1	1	na shaxba mchong
+454	1	1	na vng khugxma
+455	1	1	na vng vdzul
+456	1	1	na yin
+457	1	1	na yin dang
+458	1	1	nagsxgseb de r
+459	1	1	nagsxgseb de vtshe
+460	1	1	nagsxgseb dexlas
+461	1	1	nagsxgseb dexlas phyir
+462	1	1	nagsxgseb tu
+463	1	1	nagsxgseb tu rgyug
+464	1	1	nagsxtshal vdi
+465	1	1	nagsxtshal vdi vi
+466	1	1	nagsxtshal zhig
+467	1	1	nagsxtshal zhig tu
+468	1	1	nang du bcug
+469	1	1	nang du mchongs
+470	1	1	nang du rngonxpa
+471	1	1	nang du vdzul
+472	1	1	nas bsdad
+473	1	1	nas bsdad rngonxpa
+474	1	1	nas gnyis
+475	1	1	nas gnyis brgyud
+476	1	1	nas mar
+477	1	1	nas mar bltasxpa
+478	1	1	nas rgyab
+479	1	1	nas rgyab tu
+480	1	1	nas rusxsbal
+481	1	1	nas rusxsbal bskyabsxpa
+482	1	1	nas shaxba
+483	1	1	nas shaxba de
+484	1	1	nas vtshoxthabs
+485	1	1	nas vtshoxthabs btsal
+486	1	1	nas yib
+487	1	1	nas yib bsdadxpa
+488	1	1	naxre rgyuxmtshan
+489	1	1	naxre rgyuxmtshan de
+490	1	1	nga la
+491	1	1	nga la rnamxpa
+492	1	1	nga s dgavxbsu
+493	1	1	nga s khyed
+494	1	1	ngaxtsho dang
+495	1	1	ngaxtsho dang grogsxpo
+496	1	1	nyal nas
+497	1	1	nyal nas bsdad
+498	1	1	pagsxpa btsongxba
+499	1	1	pagsxpa btsongxba r
+500	1	1	phar nagsxgseb
+501	1	1	phar nagsxgseb tu
+502	1	1	phar rtswa
+503	1	1	phar rtswa gseb
+504	1	1	phodxpa r
+505	1	1	phodxpa r nagsxgseb
+506	1	1	phyir rang
+507	1	1	phyir rang khyim
+508	1	1	phyir rusxsbal
+509	1	1	phyir rusxsbal de
+510	1	1	r bshad
+511	1	1	r bshad chungxma
+512	1	1	r btang
+513	1	1	r btang xnas
+514	1	1	r chu
+515	1	1	r chu nang
+516	1	1	r gnas
+517	1	1	r gnas so
+518	1	1	r gyis
+519	1	1	r gyis phar
+520	1	1	r gyur
+521	1	1	r gyur rngonxpa
+522	1	1	r khrom
+523	1	1	r khrom la
+524	1	1	r medxpa
+525	1	1	r medxpa r
+526	1	1	r nagsxgseb
+527	1	1	r nagsxgseb de
+528	1	1	r ngaxtsho
+529	1	1	r ngaxtsho dang
+530	1	1	r rngonxpa gcig
+531	1	1	r rngonxpa lag
+532	1	1	r rngonxpa zhig
+533	1	1	r sa
+534	1	1	r sa la
+535	1	1	r snang
+536	1	1	r snang la
+537	1	1	r thon
+538	1	1	r thon dexmaxthag
+539	1	1	r tsixtsi
+540	1	1	r tsixtsi rgyugs
+541	1	1	r yongs
+542	1	1	r yongs su
+543	1	1	rang gi
+544	1	1	rang gi migxvkhrulxba
+545	1	1	rang khyim
+546	1	1	rang khyim la
+547	1	1	rang la
+548	1	1	rang la lamxvgro
+549	1	1	red khongxtsho
+550	1	1	red khongxtsho s
+551	1	1	red rngonxpa
+552	1	1	red rngonxpa vi
+553	1	1	rexzhig hadxde
+554	1	1	rexzhig hadxde lus
+555	1	1	rgyab tu
+556	1	1	rgyab tu khur
+557	1	1	rgyangxringx nas
+558	1	1	rgyangxringx nas shaxba
+559	1	1	rgyu r
+560	1	1	rgyu r ngaxtsho
+561	1	1	rgyug songxba
+562	1	1	rgyug songxba s
+563	1	1	rgyugs shar
+564	1	1	rgyugs shar glod
+565	1	1	rgyugs te
+566	1	1	rgyugs te rusxsbal
+567	1	1	rgyugs vcharxgzhi
+568	1	1	rgyugs vcharxgzhi ltar
+569	1	1	rgyuxmtshan de
+570	1	1	rgyuxmtshan de la
+571	1	1	rixdwags rnams
+572	1	1	rixdwags rnams bde
+573	1	1	rjes shaxba
+574	1	1	rjes shaxba vdzin
+575	1	1	rjesxma chod
+576	1	1	rjesxma chod xnas
+577	1	1	rnams bde
+578	1	1	rnams bde zhing
+579	1	1	rnamxpa tsho dang
+580	1	1	rnamxpa tsho khams
+581	1	1	rnamxpa tshos
+582	1	1	rnamxpa tshos dangxlen
+583	1	1	rngonxpa gcig
+584	1	1	rngonxpa gcig kyang
+585	1	1	rngonxpa lag
+586	1	1	rngonxpa lag tu
+587	1	1	rngonxpa mangx
+588	1	1	rngonxpa mangx yodxpa
+589	1	1	rngonxpa s rgyangxringx
+590	1	1	rngonxpa s rusxsbal
+591	1	1	rngonxpa shaxba
+592	1	1	rngonxpa shaxba vi
+593	1	1	rngonxpa vi lag
+594	1	1	rngonxpa vi sems
+595	1	1	rngonxpa vi semsxskyo
+596	1	1	rngonxpa vi vgroxlam
+597	1	1	rngonxpa zhig
+598	1	1	rngonxpa zhig de
+599	1	1	rogs zhes
+600	1	1	rogs zhes bshad
+601	1	1	rol bzhin
+602	1	1	rol bzhin yodxpa
+603	1	1	rtsis byas
+604	1	1	rtsis byas na
+605	1	1	rtswa gseb
+606	1	1	rtswa gseb tu
+607	1	1	rusxsbal bskyabsxpa
+608	1	1	rusxsbal bskyabsxpa dang
+609	1	1	rusxsbal de
+610	1	1	rusxsbal de len
+611	1	1	rusxsbal gog
+612	1	1	rusxsbal gog maxnu
+613	1	1	rusxsbal khugxma
+614	1	1	rusxsbal khugxma zhig
+615	1	1	rusxsbal khur
+616	1	1	rusxsbal khur te
+617	1	1	rusxsbal mthong
+618	1	1	rusxsbal mthong sa
+619	1	1	rusxsbal naxre
+620	1	1	rusxsbal naxre rgyuxmtshan
+621	1	1	rusxsbal rngonxpa
+622	1	1	rusxsbal rngonxpa vi
+623	1	1	rusxsbal skyob
+624	1	1	rusxsbal skyob thabs
+625	1	1	rusxsbal vjug
+626	1	1	rusxsbal vjug sa
+627	1	1	rusxsbal yang
+628	1	1	rusxsbal yang mgyogsxpo
+629	1	1	rusxsbal zhig
+630	1	1	rusxsbal zhig khongxtsho
+631	1	1	rusxsbalxma r
+632	1	1	rusxsbalxma r sa
+633	1	1	s bshad
+634	1	1	s bshad rgyu
+635	1	1	s dgavxbsu
+636	1	1	s dgavxbsu byed
+637	1	1	s gnasxtshul
+638	1	1	s gnasxtshul dexrang
+639	1	1	s khyed kyi
+640	1	1	s khyed tsho
+641	1	1	s khyim
+642	1	1	s khyim mtshes
+643	1	1	s rang
+644	1	1	s rang gi
+645	1	1	s rgyangxringx
+646	1	1	s rgyangxringx nas
+647	1	1	s rjesxma
+648	1	1	s rjesxma chod
+649	1	1	s rnamxpa
+650	1	1	s rnamxpa tshos
+651	1	1	s rusxsbal khugxma
+652	1	1	s rusxsbal khur
+653	1	1	s shaxba
+654	1	1	s shaxba dang
+655	1	1	s vgyodxsems
+656	1	1	s vgyodxsems skyes
+657	1	1	s zas
+658	1	1	s zas kham
+659	1	1	sa la
+660	1	1	sa la gqyugs
+661	1	1	sa r
+662	1	1	sa r medxpa
+663	1	1	sa vi
+664	1	1	sa vi snod
+665	1	1	sangxnyin shaxba
+666	1	1	sangxnyin shaxba vi
+667	1	1	sems la dexring
+668	1	1	sems la doxnub
+669	1	1	sems la gnasxtshul
+670	1	1	sems la zhedxsnang
+671	1	1	semsxskyo ste
+672	1	1	semsxskyo ste phyir
+673	1	1	sgrig nas
+674	1	1	sgrig nas vtshoxthabs
+675	1	1	sgrig vdod na
+676	1	1	sgrig vdod yodxpa
+677	1	1	sha btsos
+678	1	1	sha btsos te
+679	1	1	shar glod
+680	1	1	shar glod de
+681	1	1	shaxba dang
+682	1	1	shaxba dang khwaxta
+683	1	1	shaxba de mthongxba
+684	1	1	shaxba de rgyugs
+685	1	1	shaxba gcig
+686	1	1	shaxba gcig dang
+687	1	1	shaxba mchong
+688	1	1	shaxba mchong thengs
+689	1	1	shaxba rngonxpa
+690	1	1	shaxba rngonxpa vi
+691	1	1	shaxba shor
+692	1	1	shaxba shor songxba
+693	1	1	shaxba vdzin
+694	1	1	shaxba vdzin du
+695	1	1	shaxba vi pagsxpa
+696	1	1	shaxba vi sha
+697	1	1	shaxba vi vgram
+698	1	1	shi khul
+699	1	1	shi khul gyis
+700	1	1	shig tu
+701	1	1	shig tu gyur
+702	1	1	shor rngonxpa
+703	1	1	shor rngonxpa de
+704	1	1	shor songxba
+705	1	1	shor songxba s
+706	1	1	shorx s
+707	1	1	shorx s shaxba
+708	1	1	skabs de
+709	1	1	skabs de r
+710	1	1	skyes rusxsbal
+711	1	1	skyes rusxsbal rngonxpa
+712	1	1	skyes te
+713	1	1	skyes te nagsxgseb
+714	1	1	skyidxpa r
+715	1	1	skyidxpa r gnas
+716	1	1	skyob thabs
+717	1	1	skyob thabs la
+718	1	1	slebs laxnyex
+719	1	1	slebs laxnyex na
+720	1	1	snang la
+721	1	1	snang la vphur
+722	1	1	snod kyi
+723	1	1	snod kyi khugxma
+724	1	1	so btab
+725	1	1	so btab nas
+726	1	1	song na
+727	1	1	song na vng
+728	1	1	song ste
+729	1	1	song ste shi
+730	1	1	songxba s rjesxma
+731	1	1	songxba s vgyodxsems
+732	1	1	spyirxbtang zhig
+733	1	1	spyirxbtang zhig maxred
+734	1	1	srungxskyob byed
+735	1	1	srungxskyob byed ces
+736	1	1	ste phyir
+737	1	1	ste phyir rusxsbal
+738	1	1	ste rnamxpa
+739	1	1	ste rnamxpa tsho
+740	1	1	ste rusxsbalxma
+741	1	1	ste rusxsbalxma r
+742	1	1	ste sems
+743	1	1	ste sems la
+744	1	1	ste shi
+745	1	1	ste shi khul
+746	1	1	stongx dexmaxgtogs
+747	1	1	stongx dexmaxgtogs rusxsbal
+748	1	1	su khyab
+749	1	1	su khyab dus
+750	1	1	te barxsnang
+751	1	1	te barxsnang nas
+752	1	1	te chuxvgram
+753	1	1	te chuxvgram zhig
+754	1	1	te gcanxgzan
+755	1	1	te gcanxgzan dang
+756	1	1	te gnas
+757	1	1	te gnas yod
+758	1	1	te nagsxgseb
+759	1	1	te nagsxgseb dexlas
+760	1	1	te nga
+761	1	1	te nga s
+762	1	1	te rusxsbal
+763	1	1	te rusxsbal vjug
+764	1	1	te vcharxgzhi
+765	1	1	te vcharxgzhi legsxpa
+766	1	1	te zhimxpo
+767	1	1	te zhimxpo zhig
+768	1	1	thabs la
+769	1	1	thabs la grosxmol
+770	1	1	thengs gcig
+771	1	1	thengs gcig gis
+772	1	1	thon dexmaxthag
+773	1	1	thon dexmaxthag shaxba
+774	1	1	thubxpa r
+775	1	1	thubxpa r rngonxpa
+776	1	1	tsho dang grogsxpo
+777	1	1	tsho dang lhan
+778	1	1	tsho khams
+779	1	1	tsho khams bzang
+780	1	1	tshos dangxlen
+781	1	1	tshos dangxlen gnang
+782	1	1	tsixtsi gcig
+783	1	1	tsixtsi gcig bcas
+784	1	1	tsixtsi gsum
+785	1	1	tsixtsi gsum gyis
+786	1	1	tsixtsi mar
+787	1	1	tsixtsi mar khungx
+788	1	1	tsixtsi rgyugs
+789	1	1	tsixtsi rgyugs te
+790	1	1	tu gyur
+791	1	1	tu gyur te
+792	1	1	tu khur
+793	1	1	tu khur shaxba
+794	1	1	tu rgyug
+795	1	1	tu rgyug songxba
+796	1	1	tu shaxba
+797	1	1	tu shaxba gcig
+798	1	1	tu shor
+799	1	1	tu shor rngonxpa
+800	1	1	tu shorx
+801	1	1	tu shorx s
+802	1	1	tu vdzul
+803	1	1	tu vdzul rtsis
+804	1	1	vcharxgzhi legsxpa
+805	1	1	vcharxgzhi legsxpa r
+806	1	1	vcharxgzhi ltar
+807	1	1	vcharxgzhi ltar skabs
+808	1	1	vcharxgzhi mangxpo
+809	1	1	vcharxgzhi mangxpo graxsgrig
+810	1	1	vdi vi
+811	1	1	vdi vi nang
+812	1	1	vdixni spyirxbtang
+813	1	1	vdixni spyirxbtang zhig
+814	1	1	vdod na
+815	1	1	vdod na yin
+816	1	1	vdod yodxpa
+817	1	1	vdod yodxpa s
+818	1	1	vdug bsam
+819	1	1	vdug bsam ste
+820	1	1	vdzin du
+821	1	1	vdzin du rgyugs
+822	1	1	vdzul ma
+823	1	1	vdzul ma thubxpa
+824	1	1	vdzul rtsis
+825	1	1	vdzul rtsis byas
+826	1	1	vdzul rusxsbal
+827	1	1	vdzul rusxsbal gog
+828	1	1	vgram du
+829	1	1	vgram du slebs
+830	1	1	vgro bzhinx
+831	1	1	vgro bzhinx mthong
+832	1	1	vgro dgosxpa
+833	1	1	vgro dgosxpa laxsogsxpa
+834	1	1	vgro ma
+835	1	1	vgro ma phodxpa
+836	1	1	vgroxlam du
+837	1	1	vgroxlam du song
+838	1	1	vgyodxsems skyes
+839	1	1	vgyodxsems skyes rusxsbal
+840	1	1	vi gam
+841	1	1	vi gam du
+842	1	1	vi lag
+843	1	1	vi lag tu
+844	1	1	vi ltix
+845	1	1	vi ltix shig
+846	1	1	vi pagsxpa
+847	1	1	vi pagsxpa btsongxba
+848	1	1	vi sems
+849	1	1	vi sems la
+850	1	1	vi semsxskyo
+851	1	1	vi semsxskyo ste
+852	1	1	vi sha
+853	1	1	vi sha btsos
+854	1	1	vi snod
+855	1	1	vi snod kyi
+856	1	1	vi vcharxgzhi
+857	1	1	vi vcharxgzhi mangxpo
+858	1	1	vi vgram
+859	1	1	vi vgram du
+860	1	1	vi vgroxlam
+861	1	1	vi vgroxlam du
+862	1	1	vjug sa
+863	1	1	vjug sa vi
+864	1	1	vng khugxma
+865	1	1	vng khugxma stongx
+866	1	1	vng vdzul
+867	1	1	vng vdzul ma
+868	1	1	vphur te
+869	1	1	vphur te barxsnang
+870	1	1	vphur tsixtsi
+871	1	1	vphur tsixtsi mar
+872	1	1	vthung byas
+873	1	1	vthung byas te
+874	1	1	vtshe med
+875	1	1	vtshe med zhixba
+876	1	1	vtshoxba rol
+877	1	1	vtshoxba rol bzhin
+878	1	1	vtshoxthabs btsal
+879	1	1	vtshoxthabs btsal ched
+880	1	1	xnas khwaxta
+881	1	1	xnas khwaxta yar
+882	1	1	xnas rngonxpa
+883	1	1	xnas rngonxpa vi
+884	1	1	xpa s
+885	1	1	xpa s gnasxtshul
+886	1	1	yagxpo zhig
+887	1	1	yagxpo zhig sgrig
+888	1	1	yang mgyogsxpo
+889	1	1	yang mgyogsxpo r
+890	1	1	yang sems
+891	1	1	yang sems la
+892	1	1	yar gnam
+893	1	1	yar gnam la
+894	1	1	yarxba r
+895	1	1	yarxba r snang
+896	1	1	yib bsdadxpa
+897	1	1	yib bsdadxpa red
+898	1	1	yin dang
+899	1	1	yin dang yin
+900	1	1	yin nga
+901	1	1	yin nga s
+902	1	1	yin zhes
+903	1	1	yin zhes lan
+904	1	1	yinxnavang rngonxpa
+905	1	1	yinxnavang rngonxpa shaxba
+906	1	1	yinxnaxyang nagsxtshal
+907	1	1	yinxnaxyang nagsxtshal vdi
+908	1	1	yod na
+909	1	1	yod na mnyam
+910	1	1	yod zhig
+911	1	1	yod zhig la
+912	1	1	yodxpa red
+913	1	1	yodxpa red khongxtsho
+914	1	1	yodxpa s khyed
+915	1	1	yodxpa s rnamxpa
+916	1	1	yong ste
+917	1	1	yong ste rnamxpa
+918	1	1	yongs su
+919	1	1	yongs su khyab
+920	1	1	yulxphyogs de
+921	1	1	yulxphyogs de r
+922	1	1	za dang
+923	1	1	za dang chu
+924	1	1	za sangxnyin
+925	1	1	za sangxnyin shaxba
+926	1	1	zas kham
+927	1	1	zas kham gangxyod
+928	1	1	zhedxsnang skyes
+929	1	1	zhedxsnang skyes te
+930	1	1	zhes bshad
+931	1	1	zhes bshad khwaxta
+932	1	1	zhes lan
+933	1	1	zhes lan btab
+934	1	1	zhig de
+935	1	1	zhig de r
+936	1	1	zhig gi
+937	1	1	zhig gi nang
+938	1	1	zhig khongxtsho
+939	1	1	zhig khongxtsho vi
+940	1	1	zhig la rusxsbal
+941	1	1	zhig la vgro
+942	1	1	zhig maxred
+943	1	1	zhig maxred bsamxpa
+944	1	1	zhig sgrig
+945	1	1	zhig sgrig vdod
+946	1	1	zhig tu
+947	1	1	zhig tu shaxba
+948	1	1	zhig za
+949	1	1	zhig za sangxnyin
+950	1	1	zhimxpo zhig
+951	1	1	zhimxpo zhig za
+952	1	1	zhing skyidxpa
+953	1	1	zhing skyidxpa r
+954	1	1	zhixba vi
+955	1	1	zhixba vi ltix

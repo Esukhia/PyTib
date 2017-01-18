@@ -1,0 +1,65 @@
+Loading level lists...
+Finished loading level lists
+Loading user files...
+Finished loading user files
+Creating lexical profile...
+Finished creating lexical profile
+
+File name: C:/Users/NT$/Documents/Ant/ant_story.txt
+Number of lines: 1
+Number of types: 233
+Number of tokens: 502
+
+Level list 1: Level 1 - 1000 words.txt
+Number of types: 1000
+Number of groups (families): 1000
+
+Statistics
+LEVEL	FILE	TOKEN	TOKEN%	CUMTOKEN%	TYPE	TYPE%	CUMTYPE%	GROUP	GROUP%	CUMGROUP%
+1	Level 1 - 1000 words.txt	307	61.16	61.16	109	46.78	46.78	109	46.78	46.78
+0	-	195	38.84	100	124	53.22	100	124	53.22	100
+TOTAL:	502			233			233
+
+Table of ranges: Types
+Types	No. of Files
+233	1
+Table of ranges: Groups
+Groups	No. of Files
+109	1
+
+Groups Found In Base List 1
+File name: Level 1 - 1000 words.txt
+
+Group	Range	Freq	uf_1
+la	1	18	18
+r	1	18	18
+de	1	17	17
+s	1	15	15
+vi	1	13	13
+dang	1	11	11
+du	1	11	11
+te	1	9	9
+zhig	1	9	9
+na	1	8	8
+nas	1	8	8
+tu	1	7	7
+gcig	1	6	6
+ste	1	5	5
+bshad	1	4	4
+byas	1	4	4
+nang	1	4	4
+sems	1	4	4
+dexnas	1	3	3
+gi	1	3	3
+gyis	1	3	3
+mnyam	1	3	3
+nga	1	3	3
+rang	1	3	3
+rnamxpa	1	3	3
+sa	1	3	3
+vgro	1	3	3
+yin	1	3	3
+yodxpa	1	3	3
+bsamxpa	1	2	2
+byed	1	2	2
+chu	1	2	2
