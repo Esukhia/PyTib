@@ -6,7 +6,7 @@ from tempfile import NamedTemporaryFile
 try:
     from icu import RuleBasedCollator
 except ImportError:
-    from pytib.third_party.icu.icu import RuleBasedCollator
+    from .third_party.icu.icu import RuleBasedCollator
 import re
 import csv
 
