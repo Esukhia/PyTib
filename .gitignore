@@ -63,3 +63,4 @@ target/
 
 # PyCharm config
 .idea/
+!/pytib/third_party/_icu.cpython-35m-x86_64-linux-gnu.so

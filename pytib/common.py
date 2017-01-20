@@ -3,7 +3,10 @@
 from bisect import bisect_left
 from collections import OrderedDict, Callable
 from tempfile import NamedTemporaryFile
-from icu import RuleBasedCollator
+try:
+    from icu import RuleBasedCollator
+except ImportError:
+    from .third_party.icu import RuleBasedCollator
 import re
 import csv
 
