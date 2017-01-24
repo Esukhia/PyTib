@@ -141,7 +141,7 @@ def tib_sort(l):
 
 
 def write_file(file_path, content):
-    with open(file_path, 'w', -1, 'utf8') as f:
+    with open(file_path, 'w', -1, 'utf-8-sig') as f:
         f.write(content)
 
 
