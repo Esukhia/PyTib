@@ -184,13 +184,17 @@ def write_csv(path, rows, header=None, delimiter=',', dialect='excel'):
                 norm_rows.append(r)
         return norm_rows
 
-    with open(path, 'w') as csvfile:
-        writer = csv.writer(csvfile, dialect=dialect, delimiter=delimiter)
+    with open(path, 'w', encoding='utf-8-sig') as csvfile:
+        file_writer = csv.writer(csvfile, dialect=dialect, delimiter=delimiter)
         if header:
             rows = [header]+rows
             rows = normalise(rows)
             for row in rows:
-                writer.writerow(row)
+                file_writer.writerow(row)
+        else:
+            rows = normalise(rows)
+            for row in rows:
+                file_writer.writerow(row)
 
 
 def temp_object(content):
