@@ -7,6 +7,8 @@ import pytib
 from pytib.common import open_file, write_file
 
 seg = pytib.Segment()
+seg.include_user_vocab(['tsikchen'])
+
 in_path = 'raw_kangyur'
 for f in os.listdir(in_path):
     content = open_file('{}/{}'.format(in_path, f))
