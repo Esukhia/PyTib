@@ -10,5 +10,5 @@ seg = pytib.Segment()
 in_path = 'raw_kangyur'
 for f in os.listdir(in_path):
     content = open_file('{}/{}'.format(in_path, f))
-    segmented = seg.segment()
+    segmented = seg.segment(content)
     write_file('output/'+f.replace('.txt', '_seg.txt'), segmented)
