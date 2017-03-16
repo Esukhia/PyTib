@@ -27,7 +27,7 @@ class Segment:
 
         self.n = 0  # counter needed between methods segment() and __process()
 
-    def include_user_vocab(self, vocabs=True):
+    def include_user_vocab(self, vocabs=True, local_vocab=[]):
         def find_non_dupes(longer_list, len_longer, shorter_list):
             non_dupes = []
             for x in shorter_list:
@@ -44,6 +44,9 @@ class Segment:
                 new = find_non_dupes(self.lexicon, self.len_lexicon, deduped_vocab)
                 new_entries.extend(new)
             return new_entries
+
+        if local_vocab != []:
+            self.user_vocabs['local'] = local_vocab
 
         # 1. find all new entries to add to self.lexicon
         if type(vocabs) is not list:
