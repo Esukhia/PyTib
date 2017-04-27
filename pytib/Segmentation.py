@@ -13,6 +13,9 @@ class Segment:
         self.merged_part = r'(ར|ས|འི|འམ|འང|འོ|འིའོ)$'
         self.punct_regex = r'(་?[༄༅༆༇༈།༎༏༐༑༔\s]+་?)'
 
+        self.ra_sa_marker = '-'
+        self.missing_aa_marker = '-'
+
         self.SC = SC
 
         # for bisect
@@ -84,7 +87,7 @@ class Segment:
             maybe = re.split(self.merged_part, word)
             if not search(self.lexicon, maybe[0], self.len_lexicon):
                 if reinsert_aa and search(self.lexicon, maybe[0] + 'འ', self.len_lexicon):
-                    list2.append(maybe[0] + 'འ')
+                    list2.append(maybe[0] + self.missing_aa_marker)
                 else:
                     list2.append(maybe[0])
             elif len(maybe) >= 2 and re.findall(self.merged_part, maybe[1]):
@@ -98,7 +101,7 @@ class Segment:
             if maybe[1] == 'འིའོ':
                 maybe[1] = maybe[1][:2]+' '+maybe[1][2:]
             if distinguish_ra_sa:
-                list2.append('_{}་'.format(maybe[1]))
+                list2.append('{}{}་'.format(self.ra_sa_marker, maybe[1]))
             else:
                 list2.append(maybe[1] + '་')
             # del list1[:num]
