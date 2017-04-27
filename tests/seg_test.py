@@ -44,6 +44,6 @@ seg = Segment()
 print(seg.len_lexicon)
 
 # test the segmentation
-print(seg.segment('ནམ་མཁར་མཐར་', reinsert_aa=True))
+print(seg.segment('ནམ་མཁར་མཐར་དག་དགའི་', reinsert_aa=True))
 print(Segment().segment('ནམ་མཁར་མཐར་', distinguish_ra_sa=True))
 print(Segment().segment('ནམ་མཁར་མཐར་', reinsert_aa=True, distinguish_ra_sa=True))
