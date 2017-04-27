@@ -90,6 +90,11 @@ class Segment:
                     list2.append(maybe[0] + self.missing_aa_marker)
                 else:
                     list2.append(maybe[0])
+            elif len(maybe) >= 2 and re.findall(self.merged_part, maybe[1]):
+                if reinsert_aa and search(self.lexicon, maybe[0] + 'འ', self.len_lexicon):
+                    list2.append(maybe[0] + self.missing_aa_marker)
+                else:
+                    list2.append(maybe[0])
             else:
                 list2.append(maybe[0])
             # separate འིའོ
