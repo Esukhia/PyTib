@@ -13,8 +13,8 @@ class Segment:
         self.merged_part = r'(ར|ས|འི|འམ|འང|འོ|འིའོ)$'
         self.punct_regex = r'(་?[༄༅༆༇༈།༎༏༐༑༔\s]+་?)'
 
-        self.ra_sa_marker = '-'
-        self.missing_aa_marker = '-'
+        self.ra_sa_marker = '@'
+        self.missing_aa_marker = '%'
 
         self.SC = SC
 
