@@ -7,54 +7,56 @@ __version__ = '0.0.0'
 import os
 import json
 from .SylComponents import SylComponents
-this_dir, this_filename = os.path.split(__file__)
+from .common import open_file
+
+# all the paths in use
+this_dir = os.path.split(__file__)[0]
+uncompound_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "གཅོད་མཐའི་ཚིག་ཐོ།.txt")
+particles_path = os.path.join(this_dir, "data", "particles.json")
+monlam_verbs_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "སྨོན་ལམ་བྱ་ཚིག་གི་ཐོ།.txt")
+exceptions_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "དམིགས་གསལ་ཚིག་ཐོ།.txt")
+vocab_path = os.path.join(this_dir, "..", "..", "ཚིག་གཅོད་སྒེར་ཐོ་ཡིག་སྣོད།")
+compound_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "སྡོམ་དགོས་ཚིག་ཐོ།.csv")
+ancient_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "བརྡའ་རྙིང་ཚིག་ཐོ།.txt")
+syl_components_path = os.path.join(this_dir, "data", "SylComponents.json")
+agreement_path = os.path.join(this_dir, "data", "Agreement.json")
 
 # lexicon used by Segment
-with open(os.path.join(this_dir, "data", "uncompound_lexicon.txt"), 'r', -1, 'utf-8-sig') as f:
-    lexicon = [line.strip() for line in f.readlines()]
+lexicon = [line.strip() for line in open_file(uncompound_path).strip().split('\n')]
 # extensions to the lexicon : exceptions (sskrt + others), particles
-with open(os.path.join(this_dir, "data", "particles.json"), 'r', -1, 'utf-8-sig') as f:
-    lexicon.extend(json.loads(f.read())['particles'])
-with open(os.path.join(this_dir, "data", "monlam1_verbs.txt"), 'r', -1, 'utf-8-sig') as f:
-    lexicon.extend([line.strip().split(' | ')[0] for line in f.readlines()])
-with open(os.path.join(this_dir, "data", "exceptions.txt"), 'r', -1, 'utf-8-sig') as f:
-    exceptions = [line.strip() for line in f.readlines() if not line.startswith('#')]
+lexicon.extend(json.loads(open_file(particles_path))['particles'])
+lexicon.extend([line for line in open_file(monlam_verbs_path).strip().split('\n')])
+exceptions = [line.strip() for line in open_file(exceptions_path).strip().split('\n') if not line.startswith('#')]
 lexicon.extend(exceptions)
 # calculate the sizes of words in the lexicon, for segment()
 len_word_syls = list(set([len(word.split('་')) for word in lexicon]))
 len_word_syls = sorted(len_word_syls, reverse=True)
 
 # Include user vocabulary lists in the lexicon
-vocab_path = os.path.join(this_dir, 'user_vocabs')
 user_vocabs = {}
 for f in os.listdir(vocab_path):
     origin = f.replace('.txt', '')
-    with open(os.path.join(vocab_path, f), 'r', -1, 'utf-8-sig') as f:
-        entries = [line.strip() for line in f.readlines() if not line.startswith('#')]
-        user_vocabs[origin] = entries
+    entries = [line.strip() for line in open_file(os.path.join(vocab_path, f)).strip().split('\n') if not line.startswith('#')]
+    user_vocabs[origin] = entries
 
 # compound words to join by default
-with open(os.path.join(this_dir, "data", "compound_lexicon.csv"), 'r', -1, 'utf-8-sig') as f:
-    raw = [line.strip() for line in f.readlines()]
-    # parse the data in the compound lexicon
-    compound = ([], [])
-    for line in raw[1:]:
-        if line.strip().strip(',') != '' and not line.startswith('#'):
-            # Todo : change to \t when putting in production
-            parts = line.split(',')
-            # list of words as created by the base segmentation
-            compound[0].append(parts[2].replace('-', '').replace('+', '').split(' '))
-            # list of words with the markers to split('+') and merge ('-')
-            compound[1].append((parts[1].split(' '), parts[2].split(' '), parts[3].split(' ')))
-
+raw = [line.strip() for line in open_file(compound_path).strip().split('\n')]
+# parse the data in the compound lexicon
+compound = ([], [])
+for line in raw[1:]:
+    if line.strip().strip(',') != '' and not line.startswith('#'):
+        # Todo : change to \t when putting in production
+        parts = line.split(',')
+        # list of words as created by the base segmentation
+        compound[0].append(parts[2].replace('-', '').replace('+', '').split(' '))
+        # list of words with the markers to split('+') and merge ('-')
+        compound[1].append((parts[1].split(' '), parts[2].split(' '), parts[3].split(' ')))
 
 # ancient spelling
-with open(os.path.join(this_dir, "data", "ancient.txt"), 'r', -1, 'utf-8-sig') as f:
-    ancient = [line.strip() for line in f.readlines()]
+ancient = [line.strip() for line in open_file(ancient_path).strip().split('\n')]
 
 # data for SylComponents
-with open(os.path.join(this_dir, "data", "SylComponents.json"), 'r', -1, 'utf-8-sig') as f:
-    data = json.loads(f.read())
+data = json.loads(open_file(syl_components_path))
 dadrag = data['dadrag']
 roots = data['roots']
 suffixes = data['suffixes']
@@ -70,8 +72,7 @@ for am in ambiguous:
     ambiguous[am] = (ambiguous[am][0], ambiguous[am][1])
 
 # data for Agreement
-with open(os.path.join(this_dir, "data", "Agreement.json"), 'r', -1, 'utf-8-sig') as f:
-    a_data = json.loads(f.read())
+a_data = json.loads(open_file(agreement_path))
 particles = a_data['particles']
 corrections = a_data['corrections']
 

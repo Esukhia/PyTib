@@ -3,6 +3,7 @@
 from bisect import bisect_left
 from collections import OrderedDict, Callable
 from tempfile import NamedTemporaryFile
+from io import open  # bugfix to prevent confusion between python2 and python3 installation on the same Mac machine
 import re
 import csv
 
@@ -141,16 +142,16 @@ def tib_sort(l):
 
 
 def write_file(file_path, content):
-    with open(file_path, 'w', -1, 'utf-8-sig') as f:
+    with open(file_path, mode='w', encoding='utf-8-sig') as f:
         f.write(content)
 
 
 def open_file(file_path):
     try:
-        with open(file_path, 'r', -1, 'utf-8-sig') as f:
+        with open(file_path, mode='r', encoding='utf-8-sig') as f:
             return f.read()
     except UnicodeDecodeError:
-        with open(file_path, 'r', -1, 'utf-16-le') as f:
+        with open(file_path, mode='r', encoding='utf-16-le') as f:
             return f.read()
 
 
@@ -184,7 +185,7 @@ def write_csv(path, rows, header=None, delimiter=',', dialect='excel'):
                 norm_rows.append(r)
         return norm_rows
 
-    with open(path, 'w', encoding='utf-8-sig') as csvfile:
+    with codecs.open(path, mode='w', encoding='utf-8-sig') as csvfile:
         file_writer = csv.writer(csvfile, dialect=dialect, delimiter=delimiter)
         if header:
             rows = [header]+rows
