@@ -11,13 +11,13 @@ from .common import open_file
 
 # all the paths in use
 this_dir = os.path.split(__file__)[0]
-uncompound_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "གཅོད་མཐའི་ཚིག་ཐོ།.txt")
+uncompound_path = os.path.join(this_dir, "data", "uncompound_lexicon.txt")
 particles_path = os.path.join(this_dir, "data", "particles.json")
-monlam_verbs_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "སྨོན་ལམ་བྱ་ཚིག་གི་ཐོ།.txt")
-exceptions_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "དམིགས་གསལ་ཚིག་ཐོ།.txt")
-vocab_path = os.path.join(this_dir, "..", "..", "ཚིག་གཅོད་སྒེར་ཐོ་ཡིག་སྣོད།")
-compound_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "སྡོམ་དགོས་ཚིག་ཐོ།.csv")
-ancient_path = os.path.join(this_dir, "..", "..", "ཉེར་མཁོ་ཡིག་ཆ།", "ཚིག་གཅོད་སྙི་ཆས་ལ་མཁོ་བ།", "བརྡའ་རྙིང་ཚིག་ཐོ།.txt")
+monlam_verbs_path = os.path.join(this_dir, "data", "monlam1_verbs.txt")
+exceptions_path = os.path.join(this_dir, "data", "exceptions.txt")
+vocab_path = os.path.join(this_dir, "user_vocabs")
+compound_path = os.path.join(this_dir, "data", "compound_lexicon.csv")
+ancient_path = os.path.join(this_dir, "data", "ancient.txt")
 syl_components_path = os.path.join(this_dir, "data", "SylComponents.json")
 agreement_path = os.path.join(this_dir, "data", "Agreement.json")
 
